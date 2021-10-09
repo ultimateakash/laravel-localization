@@ -18,7 +18,7 @@ Route::get('setlocale/{locale}', function($lang) {
     return redirect()->back();
 });
 
-Route::group(['middleware'=>'language'],function () {
+Route::group(['middleware'=>'language'], function () {
     Route::get('/', function () {
         return view('home');
     });
